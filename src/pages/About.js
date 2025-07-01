@@ -1,48 +1,72 @@
 import React, { useState, useEffect } from 'react';
-import Judith from '../images/judith.jpeg'
+import Judith1 from '../images/judith1.jpeg';
+import Bonet from '../images/bonet.jpg'
+import Waa from '../images/waa.jpg'
+import Interia from '../images/interia.jpg'
+import Chef from '../images/chef.jpeg'
+import Head1 from '../images/head1.jpeg'
+import Head2 from '../images/head2.jpeg'
+import Waita from '../images/waita.jpeg'
 
+// Optimized image URLs with size parameters
 const aboutImages = [
   {
     id: 'chef',
-    src: 'https://images.pexels.com/photos/6872185/pexels-photo-6872185.jpeg',
+    src: Bonet,
     alt: 'Chef preparing seafood',
     caption: 'Our chefs bring passion to every dish.',
   },
   {
     id: 'catch',
-    src: 'https://images.pexels.com/photos/128865/pexels-photo-128865.jpeg',
+    src: Waa,
     alt: 'Fresh catch of the day',
     caption: 'Sustainably sourced, fresh daily.',
   },
   {
     id: 'dining',
-    src: 'https://images.pexels.com/photos/299347/pexels-photo-299347.jpeg',
+    src: Interia,
     alt: 'Cozy dining area',
     caption: 'A warm and inviting atmosphere.',
   },
 ];
 
 const teamMembers = [
-  {
+   {
     id: 1,
-    name: 'Chef Moria Okoth',
-    role: 'Head Chef',
-    bio: 'With 20 years of experience, Maria crafts seafood dishes inspired by coastal traditions.',
-    image: 'https://images.pexels.com/photos/7447288/pexels-photo-7447288.jpeg',
+    name: 'Elizabeth',
+    role: 'CEO',
+    bio: 'Elizabeth ensures every thing runs as normal and uptodate',
+    image: Judith1,
   },
   {
     id: 2,
-    name: 'Samuel Ndungu',
-    role: 'Sous Chef',
-    bio: 'Samuel\'s innovative techniques elevate our menu with bold flavors.',
-    image: 'https://images.pexels.com/photos/12642132/pexels-photo-12642132.jpeg',
+    name: 'Silas',
+    role: 'Manager',
+    bio: 'Silas ensures every guest leaves with a smile and a memorable experience.',
+    image: Head1,
   },
+ 
   {
     id: 3,
-    name: 'Elizabeth',
-    role: 'Manager',
-    bio: 'Elizabeth ensures every guest leaves with a smile and a memorable experience.',
-    image: Judith,
+    name: 'Chef David',
+    role: 'Sous Chef',
+    bio: 'David\'s innovative techniques elevate our menu with bold flavors.',
+    image: Chef,
+  },
+   {
+    id: 4,
+    name: 'Chef Kevin',
+    role: 'Sous Chef',
+    bio: 'Kevin\'s innovative techniques elevate our menu with bold flavors.',
+    image: Head2,
+  },
+  
+  {
+    id: 5,
+    name: 'Diana, Meisy and Eliza',
+    role: 'Waitresses',
+    bio: 'They ensure proper customer expirience and fast service',
+    image: Waita,
   },
 ];
 
@@ -50,27 +74,61 @@ function About() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [imageStatus, setImageStatus] = useState({});
 
-  // Preload images
+  // Preload images with optimized loading strategy
   useEffect(() => {
-    const imageUrls = [...aboutImages.map(item => item.src), ...teamMembers.map(member => member.image)];
+    let isMounted = true;
+    
+    const imageUrls = [
+      ...aboutImages.map(item => item.src), 
+      ...teamMembers.map(member => member.image)
+    ];
+    
     const preloadImages = imageUrls.map(src => {
       return new Promise((resolve) => {
-        const img = new Image();
-        img.src = src;
-        img.onload = () => {
-          setImageStatus(prev => ({ ...prev, [src]: 'loaded' }));
+        if (src.startsWith('http')) {
+          const img = new Image();
+          img.src = src;
+          img.loading = 'lazy';
+          img.onload = () => {
+            if (isMounted) {
+              setImageStatus(prev => ({ ...prev, [src]: 'loaded' }));
+            }
+            resolve();
+          };
+          img.onerror = () => {
+            if (isMounted) {
+              setImageStatus(prev => ({ ...prev, [src]: 'error' }));
+            }
+            resolve();
+          };
+        } else {
+          // Local images are assumed to load quickly
+          if (isMounted) {
+            setImageStatus(prev => ({ ...prev, [src]: 'loaded' }));
+          }
           resolve();
-        };
-        img.onerror = () => {
-          setImageStatus(prev => ({ ...prev, [src]: 'error' }));
-          resolve();
-        };
+        }
       });
     });
 
+    // Set a timeout to show content even if some images fail
+    const timeout = setTimeout(() => {
+      if (isMounted) {
+        setImagesLoaded(true);
+      }
+    }, 2000); // Max 2 seconds wait time
+
     Promise.all(preloadImages).then(() => {
-      setImagesLoaded(true);
+      clearTimeout(timeout);
+      if (isMounted) {
+        setImagesLoaded(true);
+      }
     });
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (
@@ -92,7 +150,7 @@ function About() {
             <div className="story-text">
               <h3 className="section-title">Our Story</h3>
               <p className="section-text">
-                Founded in 2015, Fish on the Bonnet is a celebration of seafood, inspired by the vibrant coastal cultures of East Africa and beyond. Our mission is to serve fresh, sustainably sourced dishes that delight the senses, crafted with passion and care.
+                Founded in 2015, Fish on the Bonnet is a celebration of african foods, inspired by the vibrant african cultures of East Africa and beyond. Our mission is to serve fresh, sustainably sourced dishes that delight the senses, crafted with passion and care.
               </p>
               <p className="section-text">
                 From our signature grilled Nile perch to our innovative fish fillet creations, every plate tells a story of tradition and flavor. Nestled in the heart of the city, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories.
@@ -125,6 +183,7 @@ function About() {
                       alt={image.alt}
                       className="gallery-image"
                       loading="lazy"
+                      data-loaded={imageStatus[image.src] === 'loaded'}
                     />
                     <div className="image-overlay"></div>
                   </div>
@@ -146,6 +205,7 @@ function About() {
                       alt={member.name}
                       className="team-image"
                       loading="lazy"
+                      data-loaded={imageStatus[member.image] === 'loaded'}
                     />
                     <div className="team-overlay"></div>
                   </div>

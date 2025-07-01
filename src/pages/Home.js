@@ -1,42 +1,57 @@
-import React, { useState, useEffect } from 'react';
+// 
+
+
+import React, { useState, useEffect, useCallback } from 'react';
 
 
 function Home() {
   const [currentDishIndex, setCurrentDishIndex] = useState(0);
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [bgLoaded, setBgLoaded] = useState(false);
 
   const dishes = [
-    { name: "Grilled Salmon", image: "https://images.pexels.com/photos/30882832/pexels-photo-30882832.jpeg" },
-    { name: "Crispy Fish & Chips", image: "https://images.pexels.com/photos/19034923/pexels-photo-19034923.jpeg" },
-    { name: "Seafood Platter", image: "https://images.pexels.com/photos/19725450/pexels-photo-19725450.jpeg" },
-    { name: "Lobster Thermidor", image: "https://images.pexels.com/photos/4198344/pexels-photo-4198344.jpeg" },
-    { name: "Sushi Selection", image: "https://images.pexels.com/photos/5638544/pexels-photo-5638544.jpeg" }
+    { name: "Grilled Salmon", image: "https://images.pexels.com/photos/30882832/pexels-photo-30882832.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Crispy Fish & Chips", image: "https://images.pexels.com/photos/19034923/pexels-photo-19034923.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Seafood Platter", image: "https://images.pexels.com/photos/19725450/pexels-photo-19725450.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Lobster Thermidor", image: "https://images.pexels.com/photos/4198344/pexels-photo-4198344.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Sushi Selection", image: "https://images.pexels.com/photos/5638544/pexels-photo-5638544.jpeg?auto=compress&cs=tinysrgb&w=800" }
   ];
 
   const backgroundImages = [
-    "https://images.pexels.com/photos/1123250/pexels-photo-1123250.jpeg",
-    "https://images.pexels.com/photos/2966196/pexels-photo-2966196.jpeg",
-    "https://images.pexels.com/photos/13915043/pexels-photo-13915043.jpeg",
-    "https://images.pexels.com/photos/30325818/pexels-photo-30325818.jpeg",
-    'https://images.pexels.com/photos/30882832/pexels-photo-30882832.jpeg',
-    'https://images.pexels.com/photos/32154819/pexels-photo-32154819.jpeg',
-    'https://images.pexels.com/photos/5638544/pexels-photo-5638544.jpeg',
-    'https://images.pexels.com/photos/8250724/pexels-photo-8250724.jpeg',
-    'https://images.pexels.com/photos/4206592/pexels-photo-4206592.jpeg',
-    
-    'https://images.pexels.com/photos/2232433/pexels-photo-2232433.jpeg',
+    "https://images.pexels.com/photos/1123250/pexels-photo-1123250.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/2966196/pexels-photo-2966196.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/13915043/pexels-photo-13915043.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/30325818/pexels-photo-30325818.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/30882832/pexels-photo-30882832.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/32154819/pexels-photo-32154819.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/5638544/pexels-photo-5638544.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/8250724/pexels-photo-8250724.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/4206592/pexels-photo-4206592.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/2232433/pexels-photo-2232433.jpeg?auto=compress&cs=tinysrgb&w=1600",
   ];
 
-  // Preload images
-  useEffect(() => {
-    const preloadImages = [...backgroundImages, ...dishes.map(dish => dish.image)];
-    preloadImages.forEach(src => {
-      const img = new Image();
-      img.src = src;
+  // Memoized preload function
+  const preloadImages = useCallback(() => {
+    const allImages = [...backgroundImages, ...dishes.map(dish => dish.image)];
+    const imagePromises = allImages.map(src => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = resolve; // Resolve even on error to avoid blocking
+      });
     });
-    setBgLoaded(true);
-  }, []);
+
+    Promise.all(imagePromises).then(() => {
+      setBgLoaded(true);
+    });
+  }, [backgroundImages, dishes]);
+
+  // Preload images on mount
+  useEffect(() => {
+    preloadImages();
+  }, [preloadImages]);
 
   // Rotate featured dish every 5 seconds
   useEffect(() => {
@@ -51,15 +66,20 @@ function Home() {
     return () => clearInterval(dishInterval);
   }, [dishes.length]);
 
-  // Rotate background image every 8 seconds
-  const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  // Rotate background image every 3 seconds
   useEffect(() => {
     const bgInterval = setInterval(() => {
       setCurrentBgIndex(prev => (prev + 1) % backgroundImages.length);
-    }, 8000);
+    }, 3000); // Changed to 3 seconds as per request
 
     return () => clearInterval(bgInterval);
   }, [backgroundImages.length]);
+
+  // Handle manual dish selection
+  const handleDishSelect = useCallback((index) => {
+    setCurrentDishIndex(index);
+    setIsAnimating(false);
+  }, []);
 
   return (
     <section className={`home-hero ${bgLoaded ? 'loaded' : ''}`}>
@@ -75,8 +95,8 @@ function Home() {
       </div>
       
       <div className="home-content">
-        <h1 className="home-title">Welcome to Fish on the Bonnet</h1>
-        <p className="home-subtitle">Experience the finest selection of fish dishes from every corner of the globe.</p>
+        <h1 className="home-title">Welcome to Fish on The Bonnet</h1>
+        <p className="home-subtitle">Savor the Finest Global Fish Dishes</p>
         
         {/* Featured dish with refined animation */}
         <div className="featured-dish-container">
@@ -88,6 +108,7 @@ function Home() {
                   src={dish.image}
                   alt={dish.name}
                   className={`dish-image ${index === currentDishIndex ? 'active' : ''}`}
+                  loading="lazy"
                 />
               ))}
             </div>
@@ -98,10 +119,7 @@ function Home() {
                   <button
                     key={index}
                     className={`dot ${index === currentDishIndex ? 'active' : ''}`}
-                    onClick={() => {
-                      setCurrentDishIndex(index);
-                      setIsAnimating(false);
-                    }}
+                    onClick={() => handleDishSelect(index)}
                     aria-label={`Show ${dishes[index].name}`}
                   />
                 ))}
@@ -114,13 +132,6 @@ function Home() {
           <a href="/menu" className="home-cta">Explore Menu</a>
           <a href="/reservations" className="home-cta secondary">Book a Table</a>
         </div>
-      </div>
-      
-      {/* Floating food elements */}
-      <div className="floating-elements">
-        <div className="floating-element fish"></div>
-        <div className="floating-element lemon"></div>
-        <div className="floating-element herb"></div>
       </div>
     </section>
   );

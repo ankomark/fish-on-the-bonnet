@@ -1,6 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Matumbo from '../images/matumbo.jpeg'
+import Ro from '../images/ro.jpeg'
+import Tilapia from '../images/tilapia.jpg'
+import Ta from '../images/ta.jpeg'
+import Rech from '../images/rech.jpg'
+import Uji from '../images/uji.jpeg'
+import Tea3 from '../images/tea3.jpg'
+import Tea2 from '../images/tea2.jpg'
+import White from '../images/white.jpg'
+import Black from '../images/black.jpg'
+import Milo from '../images/milo.jpg'
 
 
 const FishOnTheBonnet = () => {
@@ -13,46 +24,46 @@ const FishOnTheBonnet = () => {
           id: 1,
           name: "Chai Special",
           description: "This is very special prepared tea",
-          price: 100,
-          image: "https://images.pexels.com/photos/27039850/pexels-photo-27039850.jpeg"
+          price: 150,
+          image:Tea3 ,
         },
         {
           id: 2,
           name: "Chai Normal",
           description: "This just normal tea ",
-          price: 50,
-          image: "https://images.pexels.com/photos/32695948/pexels-photo-32695948.jpeg"
+          price: 100,
+          image:Tea2 ,
         },
         {
           id: 3,
           name: "coffee white",
           description: "this is cool cofee",
-          price: 70,
-          image: "https://images.pexels.com/photos/814264/pexels-photo-814264.jpeg"
+          price: 120,
+          image: White ,
         },
          {
           id: 4,
           name: "black coffee",
           description: "Coffs Harbour, NSW, Australia",
-          price: 50,
-          image: "https://images.pexels.com/photos/1251083/pexels-photo-1251083.jpeg"
+          price: 100,
+          image: Black,
         },
           {
           id: 5,
           name: "Hot milk",
           description: "sweet heated fresh milk",
-          price: 100,
+          price: 150,
           image: "https://images.pexels.com/photos/32672488/pexels-photo-32672488.jpeg"
         },
            {
           id: 6,
           name: "chocolate",
           description: "sweet heated fresh ",
-          price: 70,
+          price: 120,
           image: "https://images.pexels.com/photos/3808243/pexels-photo-3808243.jpeg",
           variants: [
-            { type: "Hot chocolate", price: 100 },
-            { type:  "white chocolate", price: 100 },
+            { type: "Hot chocolate", price: 150 },
+            { type:  "white chocolate", price: 150 },
            
           ]
         },
@@ -60,123 +71,120 @@ const FishOnTheBonnet = () => {
           id: 8,
           name: "milo",
           description: "sweet heated fresh milk",
-          price: 70,
-          image: "https://images.pexels.com/photos/32704385/pexels-photo-32704385.jpeg"
+          price: 120,
+          image:Milo ,
         },
           {
           id: 9,
           name: "Ujipower",
           description: "energetic uji",
-          price: 200,
-          image: "https://images.pexels.com/photos/4974543/pexels-photo-4974543.jpeg",
+          price: 250,
+          image: Uji,
           variants: [
-            { type: "Uji brown M / L", price: 100 },
-            { type:  "Ujipower brown L/M", price: 100 },
+            { type: "Uji brown M / L", price: 150 },
+            { type:  "Ujipower brown L/M", price: 150 },
            
           ]
         },
       
       
         {
-          id: 4,
+          id: 10,
           name: "Fish Full with Ugali",
           description: "Signature fish portion with your choice of ugali (white/brown/fufu)",
-          price: 450,
-          image: "https://images.pexels.com/photos/5041491/pexels-photo-5041491.jpeg",
+          price: 500,
+          image: Rech,
           variants: [
-            { type: "White Ugali", price: 450 },
-            { type: "Brown Ugali", price: 470 },
-            { type: "Fufu", price: 500 }
+            { type: "White Ugali", price: 500 },
+            { type: "Brown Ugali", price: 530 },
+            { type: "Fufu", price: 550 }
           ]
         },
         {
-          id: 5,
+          id: 11,
           name: "Fish half with Ugali",
           description: "Premium fish portion with your choice of ugali (white/brown/fufu)",
-          price: 550,
+          price: 600,
           image: "https://images.pexels.com/photos/5364082/pexels-photo-5364082.jpeg",
           variants: [
-            { type: "White Ugali", price: 300 },
+            { type: "White Ugali", price: 350 },
+            { type: "Brown Ugali", price: 430 },
+            { type: "Fufu", price: 450 }
+          ]
+        },
+        {
+          id: 12,
+          name: "Fish Fillet with Ugali",
+          description: "Boneless fish fillet with your choice of ugali (white/brown/fufu)",
+          price: 500,
+          image: "https://images.pexels.com/photos/29307638/pexels-photo-29307638.jpeg",
+          variants: [
+            { type: "White Ugali", price: 500 },
+            { type: "Brown Ugali", price: 530 },
+            { type: "Fufu", price: 550 }
+          ]
+        },
+        {
+          id: 13,
+          name: "Beef with Ugali",
+          description: "Tender beef served with your choice of ugali (white/brown/fufu)",
+          price: 400,
+          image: Ta,
+          variants: [
+            { type: "White Ugali", price: 350 },
             { type: "Brown Ugali", price: 370 },
+            { type: "Beef rice", price: 400 },
+            { type: "Beef mukimo", price: 400 },
+            { type: "Beef matoke", price: 400 },
+            { type: "Beef pilau", price: 400 },
             { type: "Fufu", price: 400 }
           ]
         },
         {
-          id: 6,
-          name: "Fish Fillet with Ugali",
-          description: "Boneless fish fillet with your choice of ugali (white/brown/fufu)",
-          price: 450,
-          image: "https://images.pexels.com/photos/29307638/pexels-photo-29307638.jpeg",
-          variants: [
-            { type: "White Ugali", price: 450 },
-            { type: "Brown Ugali", price: 470 },
-            { type: "Fufu", price: 500 }
-          ]
-        },
-        {
-          id: 7,
-          name: "Beef with Ugali",
+          id: 14,
+          name: "Matumbo special Ugali",
           description: "Tender beef served with your choice of ugali (white/brown/fufu)",
           price: 300,
           image: "https://images.pexels.com/photos/28902895/pexels-photo-28902895.jpeg",
           variants: [
             { type: "White Ugali", price: 300 },
             { type: "Brown Ugali", price: 320 },
-            { type: "Beef rice", price: 350 },
-            { type: "Beef mukimo", price: 350 },
-            { type: "Beef matoke", price: 350 },
-            { type: "Beef pilau", price: 350 },
+            { type: "Matumbo rice", price: 300 },
+            { type: "Matumbo chapo", price: 260 },
+            { type: "Matumbo mukimo", price: 300 },
+            { type: "Beef pilau", price: 400 },
             { type: "Fufu", price: 350 }
           ]
         },
         {
-          id: 7,
-          name: "Matumbo special Ugali",
-          description: "Tender beef served with your choice of ugali (white/brown/fufu)",
-          price: 300,
-          image: "https://images.pexels.com/photos/28902895/pexels-photo-28902895.jpeg",
-          variants: [
-            { type: "White Ugali", price: 250 },
-            { type: "Brown Ugali", price: 270 },
-            { type: "Matumbo rice", price: 250 },
-            { type: "Matumbo chapo", price: 210 },
-            { type: "Matumbo mukimo", price: 250 },
-            { type: "Beef pilau", price: 350 },
-            { type: "Fufu", price: 300 }
-          ]
-        },
-      
-      
-       
-        {
-          id: 9,
+          id: 15,
           name: "Nile Perch with Ugali",
           description: "Premium Nile perch served with your choice of ugali (white/brown/fufu)",
-          price: 500,
-          image: "https://images.pexels.com/photos/29721165/pexels-photo-29721165.jpeg",
+          price: 550,
+          image: Tilapia,
           variants: [
-            { type: "White Ugali", price: 500 },
-            { type: "Brown Ugali", price: 590 },
-            { type: "Fufu", price: 540 }
+            { type: "White Ugali", price: 550 },
+            { type: "Brown Ugali", price: 630 },
+            { type: "Fufu", price: 590 }
           ]
         },
         {
-          id: 10,
+          id: 16,
           name: "Beef Pilau",
           description: "Fragrant rice cooked with tender beef and spices",
-          price: 450,
-          image: "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg"
+          price: 500,
+          image: Ro ,
         },
         {
-          id: 11,
+          id: 17,
           name: "Matumbo Special",
           description: "Seasoned tripe served with your choice of ugali (white/brown/fufu)",
-          price: 250,
-          image: "https://images.pexels.com/photos/4198344/pexels-photo-4198344.jpeg",
+          price: 300,
+          image: Matumbo,
           variants: [
-            { type: "White Ugali", price: 250 },
-            { type: "Brown Ugali", price: 270 },
-            { type: "Fufu", price: 300 }
+            { type: "White Ugali", price: 300 },
+            { type: "Brown Ugali", price: 330 },
+            { type: "Fufu", price: 350 }
           ]
         }
       ]

@@ -1,5 +1,24 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { FaTimes, FaChevronLeft, FaChevronRight, FaExpand, FaCompress } from 'react-icons/fa';
+import Matumbo from '../images/matumbo.jpeg'
+import Ro from '../images/ro.jpeg'
+import Tilapia from '../images/tilapia.jpg'
+import Ta from '../images/ta.jpeg'
+import Rech from '../images/rech.jpg'
+import Uji from '../images/uji.jpeg'
+import Tea3 from '../images/tea3.jpg'
+import Tea2 from '../images/tea2.jpg'
+import White from '../images/white.jpg'
+import Black from '../images/black.jpg'
+import Milo from '../images/milo.jpg'
+import Judith1 from '../images/judith1.jpeg';
+import Bonet from '../images/bonet.jpg'
+import Waa from '../images/waa.jpg'
+import Interia from '../images/interia.jpg'
+import Chef from '../images/chef.jpeg'
+import Head1 from '../images/head1.jpeg'
+import Head2 from '../images/head2.jpeg'
+import Waita from '../images/waita.jpeg'
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -8,6 +27,20 @@ function Gallery() {
   
   // Wrap images array in useMemo to prevent recreation on every render
   const images = useMemo(() => [
+    Milo,
+    Tilapia,
+    Black,
+   
+    Tea2,
+    Uji,
+    Rech,
+     White,
+    Ta,
+    Ro,
+    Matumbo,
+    
+    Tea3,
+    
     'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&auto=format&fit=crop',
@@ -42,7 +75,16 @@ function Gallery() {
     // Special Dishes
     'https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?w=800&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&auto=format&fit=crop'
+    'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&auto=format&fit=crop',
+    Head1,
+    Head2,
+    Judith1,
+    Waita,
+    Waa,
+    Chef,
+    Interia,
+    Bonet,
+
   ], []); // Empty dependency array means this only runs once
 
   const openImage = useCallback((src, index) => {
