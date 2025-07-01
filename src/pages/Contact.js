@@ -22,8 +22,8 @@ function Contact() {
           </div>
               <div>
                 <h4>WhatsApp</h4>
-                <a href="https://wa.me/254724579663" className="contact-link">
-                  +254 724 579 663
+                <a href="https://wa.me/254768969534" className="contact-link">
+                  +254 768969534
                 </a>
               </div>
             </div>
@@ -43,8 +43,8 @@ function Contact() {
               <div className="contact-icon">📞</div>
               <div>
                 <h4>Phone</h4>
-                <a href="tel:+254724579663" className="contact-link">
-                  +254 724 579 663
+                <a href="tel:+254768969534" className="contact-link">
+                  +254 768969534
                 </a>
               </div>
             </div>

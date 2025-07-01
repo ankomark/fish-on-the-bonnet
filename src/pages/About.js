@@ -8,6 +8,7 @@ import Head1 from '../images/head1.jpeg'
 import Head2 from '../images/head2.jpeg'
 import Waita from '../images/waita.jpeg'
 import Mercy1 from '../images/mercy1.jpeg'
+import Grace from '../images/grace.jpeg'
 
 // Optimized image URLs with size parameters
 const aboutImages = [
@@ -75,6 +76,13 @@ const teamMembers = [
     role: 'Cashier',
     bio: 'she ensures proper accounts management',
     image: Mercy1,
+  },
+   {
+    id: 7,
+    name: 'Grace',
+    role: 'Stewardess.',
+    bio: 'Maintaining cleanliness and order in the dining and kitchen areas .',
+    image: Grace,
   },
 ];
 
