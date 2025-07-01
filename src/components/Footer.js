@@ -24,7 +24,7 @@ function Footer() {
         <div className="footer-section">
           <h3 className="footer-heading">Contact Us</h3>
           <p className="footer-text">Email: fishonthebonnet@gmail.com</p>
-          <p className="footer-text">Phone: +254 724 579 663</p>
+          <p className="footer-text">Phone: +254 768969534</p>
           <p className="footer-text">Address: 123 Ocean Drive, fish on bonnet kasarani nairobi</p>
         </div>
       </div>
