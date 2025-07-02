@@ -166,23 +166,23 @@ function About() {
             <div className="story-text">
               <h3 className="section-title">Our Story</h3>
               <p className="section-text">
-                Founded in 2015, Fish on the Bonnet is a celebration of african foods, inspired by the vibrant african cultures of East Africa and beyond. Our mission is to serve fresh, sustainably sourced dishes that delight the senses, crafted with passion and care.
+                <span className='ii'>The spark amid chaos</span> March 2020: restaurants closed, streets quiet, suppliers uncertain… covid 19  pandemic shuttered countless restaurants, triggered layoffs, and devastated supply chains Despite the uncertainty, i saw an opportunity—to serve our community, create jobs and self employ. before opening the restorant we had a home based make shift restorant where we serverd fish to our neigbours  and did home dliveries , Within 6 months we broke even / grew 150% / became a community staple serving variaty of fish, little by little we grew and in july 2023 fish on the bonnet was born with sitting capacity of 50 customers and 10 staff 
               </p>
               <p className="section-text">
-                From our signature grilled Nile perch to our innovative fish fillet creations, every plate tells a story of tradition and flavor. Nestled in the heart of the city, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories.
+                From our signature grilled Nile perch to our innovative fish fillet creations, every plate tells a story of tradition and flavor. Nestled in the heart of the Kasarani, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories.
               </p>
             </div>
             <div className="story-highlight">
               <div className="highlight-card">
-                <h4>2015</h4>
+                <h4>2020</h4>
                 <p>Year Established</p>
               </div>
               <div className="highlight-card">
-                <h4>100%</h4>
+                <h4>150%</h4>
                 <p>Sustainably Sourced</p>
               </div>
               <div className="highlight-card">
-                <h4>50+</h4>
+                <h4>20+</h4>
                 <p>Signature Dishes</p>
               </div>
             </div>
