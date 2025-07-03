@@ -1,5 +1,8 @@
 // 
-
+import Tilapia from '../images/tilapia.jpg'
+import Ti from '../images/ti.jpeg'
+import Rech from '../images/rech.jpg'
+import Matumbo from '../images/matumbo.jpeg'
 
 import React, { useState, useEffect, useCallback } from 'react';
 
@@ -11,11 +14,11 @@ function Home() {
   const [bgLoaded, setBgLoaded] = useState(false);
 
   const dishes = [
-    { name: "Grilled Salmon", image: "https://images.pexels.com/photos/30882832/pexels-photo-30882832.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Tilapia", image: Tilapia },
     { name: "Crispy Fish & Chips", image: "https://images.pexels.com/photos/19034923/pexels-photo-19034923.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Seafood Platter", image: "https://images.pexels.com/photos/19725450/pexels-photo-19725450.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Lobster Thermidor", image: "https://images.pexels.com/photos/4198344/pexels-photo-4198344.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Sushi Selection", image: "https://images.pexels.com/photos/5638544/pexels-photo-5638544.jpeg?auto=compress&cs=tinysrgb&w=800" }
+    { name: "Nile peach", image: Rech },
+    { name: "Matumbo", image: Matumbo },
+    { name: "Chicken", image: Ti }
   ];
 
   const backgroundImages = [
@@ -95,7 +98,7 @@ function Home() {
       </div>
       
       <div className="home-content">
-        <h1 className="home-title">Welcome to Fish on The Bonnet</h1>
+        <h1 className="home-title">Welcome to Fish On The Bonnet</h1>
         <p className="home-subtitle">Savor the Finest Global Fish Dishes</p>
         
         {/* Featured dish with refined animation */}

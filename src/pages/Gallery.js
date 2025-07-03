@@ -19,6 +19,19 @@ import Chef from '../images/chef.jpeg'
 import Head1 from '../images/head1.jpeg'
 import Head2 from '../images/head2.jpeg'
 import Waita from '../images/waita.jpeg'
+import Ae from '../images/ae.jpeg'
+import Ai from '../images/ai.jpeg'
+import Aliya from '../images/aliya.jpeg'
+import As from '../images/as.jpeg'
+import At from '../images/at.jpeg'
+import Kie from '../images/kie.jpeg'
+import Omena from '../images/omena.jpeg'
+import Power from '../images/power.jpeg'
+import Saa from '../images/saa.jpeg'
+import Samo from '../images/samo.jpeg'
+import Tam from '../images/tam.jpeg'
+import Uge from '../images/uge.jpeg'
+
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -30,53 +43,26 @@ function Gallery() {
     Milo,
     Tilapia,
     Black,
-   
+    Uge,
+    Tam,
+    Samo,
+    Saa,
+    Power,
+    Omena,
+    Kie,
     Tea2,
     Uji,
     Rech,
-     White,
+    White,
     Ta,
     Ro,
     Matumbo,
-    
     Tea3,
-    
-    'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&auto=format&fit=crop',
-    // Main Courses
-    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1547592180-85f173990554?w=800&auto=format&fit=crop',
-    // Seafood
-    'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1563379926898-05fcd5b90859?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&auto=format&fit=crop',
-    // Desserts
-    'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop',
-    // Drinks
-    'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&auto=format&fit=crop',
-    // Special Dishes
-    'https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&auto=format&fit=crop',
-    Head1,
+    At,
+    As,
+    Aliya,
+    Ai,
+    Ae,
     Head2,
     Judith1,
     Waita,

@@ -166,10 +166,11 @@ function About() {
             <div className="story-text">
               <h3 className="section-title">Our Story</h3>
               <p className="section-text">
-                <span className='ii'>The spark amid chaos</span> March 2020: restaurants closed, streets quiet, suppliers uncertain… covid 19  pandemic shuttered countless restaurants, triggered layoffs, and devastated supply chains Despite the uncertainty, i saw an opportunity—to serve our community, create jobs and self employ. before opening the restorant we had a home based make shift restorant where we serverd fish to our neigbours  and did home dliveries , Within 6 months we broke even / grew 150% / became a community staple serving variaty of fish, little by little we grew and in july 2023 fish on the bonnet was born with sitting capacity of 50 customers and 10 staff 
+                <p  className='li'>The spark amid chaos March 2020:</p>
+                 Restaurants closed, streets quiet, suppliers uncertain Covid-19  pandemic shuttered countless restaurants, triggered layoffs, and devastated supply chains. Despite the uncertainty, I saw an opportunity to serve our community, create jobs and self employ. Before opening the bussiness  we had a home based make shift restourant where we serverd fish to our neigbours and did home dliveries. Within 6 months we broke even and  grew 150% and  became a community staple serving veriaty of fish. Little by little we grew and in july 2023 Fish On The Bonnet was born.Am now a proud owner of a restorant with a capacity  of 50 customers and 10 staff 
               </p>
               <p className="section-text">
-                From our signature grilled Nile perch to our innovative fish fillet creations, every plate tells a story of tradition and flavor. Nestled in the heart of the Kasarani, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories.
+              Nestled in the heart of the Kasarani, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories.From our signature mouth watering  Nile perch (Mbuta) and Tilapia (Ngege), cranchy dagaa (omena) to our innovative fish fillet creations, every plate tells a story of tradition and flavor.
               </p>
             </div>
             <div className="story-highlight">
