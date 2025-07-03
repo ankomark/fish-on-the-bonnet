@@ -7,7 +7,7 @@ function Contact() {
     <section className="contact-section">
       <div className="contact-container">
         <div className="contact-header">
-          <h2>Contact Fish on the Bonnet</h2>
+          <h2>Contact Fish On The Bonnet</h2>
           <p>We're here to help with your needs. Reach out anytime!</p>
         </div>
 

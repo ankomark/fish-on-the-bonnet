@@ -151,7 +151,7 @@ function About() {
     <section className="about-section">
       <div className="about-container">
         <div className="about-header">
-          <h2 className="about-title">About Fish On the Bonnet</h2>
+          <h2 className="about-title">About Fish On The Bonnet</h2>
           <p className="about-subtitle">Where there is a pinch of passion in every dish</p>
         </div>
 
@@ -167,11 +167,13 @@ function About() {
               <h3 className="section-title">Our Story</h3>
               <p className="section-text">
                 <p  className='li'>The spark amid chaos </p>
-                 March 2020: Restaurants closed, streets quiet, suppliers uncertain Covid-19  pandemic shuttered countless restaurants, triggered layoffs, and devastated supply chains. Despite the uncertainty, I saw an opportunity to serve our community, create jobs and self employ. Before opening the bussiness  we had a home based make shift restourant where we serverd fish to our neigbours and did home dliveries. Within 6 months we broke even and  grew 150% and  became a community staple serving veriaty of fish. Little by little we grew and in july 2023 Fish On The Bonnet was born.The restaurant now bost a capacity of 50 customers and 10 staff. 
+                 March 2020: Restaurants closed, streets quiet, suppliers uncertain Covid-19  pandemic shuttered countless restaurants, triggered layoffs, and devastated supply chains. Despite the uncertainty, I saw an opportunity to serve our community, create jobs and self employ. Before opening the bussiness  we had a home based make shift restourant where we serverd fish to our neigbours and did home dliveries.
               </p>
+              <p> Within 6 months we broke even and  grew 150% and  became a community staple serving veriaty of fish. Little by little we grew and in july 2023 Fish On The Bonnet was born.The restaurant now bost a capacity of 50 customers and 10 staff. </p>
               <p className="section-text">
-              Nestled in the heart of Kasarani, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories. From our signature mouth-watering Nile perch (Mbuta) and tilapia (Ngege), to our crunchy dagaa (omena) and innovative fish fillet creations, every plate tells a story of tradition and flavor.
+              Nestled in the heart of Kasarani, our restaurant offers a warm, inviting atmosphere where friends and families gather to share meals and memories. 
               </p>
+              <p>From our signature mouth-watering Nile perch (Mbuta) and tilapia (Ngege), to our crunchy dagaa (omena) and innovative fish fillet creations, every plate tells a story of tradition and flavor.</p>
             </div>
             <div className="story-highlight">
               <div className="highlight-card">

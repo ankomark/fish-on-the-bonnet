@@ -16,7 +16,7 @@ import Milo from '../images/milo.jpg'
 
 const FishOnTheBonnet = () => {
   const menuData = {
-    hotelName: "Fish on the Bonnet",
+    hotelName: "Fish On The Bonnet",
     location: "Nairobi, Kenya",
     menu: {
       menu: [

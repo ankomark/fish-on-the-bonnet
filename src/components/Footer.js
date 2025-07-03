@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3 className="footer-heading">Fish on the Bonnet</h3>
+          <h3 className="footer-heading">Fish On The Bonnet</h3>
           <p className="footer-text">Savor the finest fish dishes from around the world.</p>
         </div>
         
@@ -25,12 +25,12 @@ function Footer() {
           <h3 className="footer-heading">Contact Us</h3>
           <p className="footer-text">Email: fishonthebonnet@gmail.com</p>
           <p className="footer-text">Phone: +254 768969534</p>
-          <p className="footer-text">Address: 123 Ocean Drive, fish on bonnet kasarani nairobi</p>
+          <p className="footer-text">Address: P.O. Box 50990-00100, Nairobi Fish On The Bonnet kasarani</p>
         </div>
       </div>
       
       <div className="footer-copyright">
-        &copy; {new Date().getFullYear()} Fish on the Bonnet. All rights reserved.
+        &copy; {new Date().getFullYear()} Fish On The Bonnet. All rights reserved.
       </div>
     </footer>
   );
