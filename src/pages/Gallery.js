@@ -31,6 +31,7 @@ import Saa from '../images/saa.jpeg'
 import Samo from '../images/samo.jpeg'
 import Tam from '../images/tam.jpeg'
 import Uge from '../images/uge.jpeg'
+import Om from '../images/om.jpeg'
 
 
 function Gallery() {
@@ -65,6 +66,7 @@ function Gallery() {
     Ae,
     Head2,
     Rabuon,
+    Om,
     Waita,
     Waa,
     Chef,
