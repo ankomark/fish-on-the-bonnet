@@ -3,6 +3,8 @@ import Tilapia from '../images/tilapia.jpg'
 import Ti from '../images/ti.jpeg'
 import Rech from '../images/rech.jpg'
 import Matumbo from '../images/matumbo.jpeg'
+import Ta from '../images/ta.jpeg'
+import Ro from '../images/ro.jpeg'
 
 import React, { useState, useEffect, useCallback } from 'react';
 
@@ -14,11 +16,14 @@ function Home() {
   const [bgLoaded, setBgLoaded] = useState(false);
 
   const dishes = [
-    { name: "Nile perch", image: Tilapia },
+    
     { name: "Crispy Fish & Chips", image: "https://images.pexels.com/photos/19034923/pexels-photo-19034923.jpeg?auto=compress&cs=tinysrgb&w=800" },
     { name: "Tilapia", image: Rech },
     { name: "Matumbo", image: Matumbo },
-    { name: "Chicken", image: Ti }
+    { name: "Chicken", image: Ti },
+    { name: "Beef", image: Ta },
+    { name: "Pilau", image: Ro },
+    
   ];
 
   const backgroundImages = [

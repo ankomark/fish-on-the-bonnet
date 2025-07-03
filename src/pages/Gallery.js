@@ -32,7 +32,8 @@ import Samo from '../images/samo.jpeg'
 import Tam from '../images/tam.jpeg'
 import Uge from '../images/uge.jpeg'
 import Om from '../images/om.jpeg'
-
+import Mk from '../images/mk.jpg'
+import Room from '../images/room.jpg'
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -72,6 +73,8 @@ function Gallery() {
     Chef,
     Interia,
     Bonet,
+    Mk,
+    Room,
 
   ], []); // Empty dependency array means this only runs once
 
