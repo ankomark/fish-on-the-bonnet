@@ -11,12 +11,12 @@ import Tea2 from '../images/tea2.jpg'
 import White from '../images/white.jpg'
 import Black from '../images/black.jpg'
 import Milo from '../images/milo.jpg'
-import Judith1 from '../images/judith1.jpeg';
+
 import Bonet from '../images/bonet.jpg'
 import Waa from '../images/waa.jpg'
 import Interia from '../images/interia.jpg'
 import Chef from '../images/chef.jpeg'
-import Head1 from '../images/head1.jpeg'
+import Rabuon from '../images/rabuon.jpeg'
 import Head2 from '../images/head2.jpeg'
 import Waita from '../images/waita.jpeg'
 import Ae from '../images/ae.jpeg'
@@ -64,7 +64,7 @@ function Gallery() {
     Ai,
     Ae,
     Head2,
-    Judith1,
+    Rabuon,
     Waita,
     Waa,
     Chef,

@@ -14,9 +14,9 @@ function Home() {
   const [bgLoaded, setBgLoaded] = useState(false);
 
   const dishes = [
-    { name: "Tilapia", image: Tilapia },
+    { name: "Nile perch", image: Tilapia },
     { name: "Crispy Fish & Chips", image: "https://images.pexels.com/photos/19034923/pexels-photo-19034923.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { name: "Nile peach", image: Rech },
+    { name: "Tilapia", image: Rech },
     { name: "Matumbo", image: Matumbo },
     { name: "Chicken", image: Ti }
   ];
