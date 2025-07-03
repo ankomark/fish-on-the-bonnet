@@ -36,14 +36,14 @@ const FishOnTheBonnet = () => {
         },
         {
           id: 3,
-          name: "coffee white",
+          name: "Coffee white",
           description: "this is cool cofee",
           price: 120,
           image: White ,
         },
          {
           id: 4,
-          name: "black coffee",
+          name: "Black coffee",
           description: "Coffs Harbour, NSW, Australia",
           price: 100,
           image: Black,
@@ -57,8 +57,8 @@ const FishOnTheBonnet = () => {
         },
            {
           id: 6,
-          name: "chocolate",
-          description: "sweet heated fresh ",
+          name: "Chocolate",
+          description: "sweet heated fresh Chocolate ",
           price: 120,
           image: "https://images.pexels.com/photos/3808243/pexels-photo-3808243.jpeg",
           variants: [
@@ -69,7 +69,7 @@ const FishOnTheBonnet = () => {
         },
           {
           id: 8,
-          name: "milo",
+          name: "Milo",
           description: "sweet heated fresh milk",
           price: 120,
           image:Milo ,
@@ -81,8 +81,10 @@ const FishOnTheBonnet = () => {
           price: 250,
           image: Uji,
           variants: [
-            { type: "Uji brown M / L", price: 150 },
-            { type:  "Ujipower brown L/M", price: 150 },
+            { type: "Uji brown M ", price: 150 },
+            { type: "Uji brown  L", price: 200 },
+            { type:  "Ujipower  M", price: 150 },
+            { type:  "Ujipower  L", price: 250 },
            
           ]
         },
@@ -96,7 +98,7 @@ const FishOnTheBonnet = () => {
           image: Rech,
           variants: [
             { type: "White Ugali", price: 500 },
-            { type: "Brown Ugali", price: 530 },
+            { type: "Brown Ugali", price: 520 },
             { type: "Fufu", price: 550 }
           ]
         },
@@ -108,8 +110,8 @@ const FishOnTheBonnet = () => {
           image: "https://images.pexels.com/photos/5364082/pexels-photo-5364082.jpeg",
           variants: [
             { type: "White Ugali", price: 350 },
-            { type: "Brown Ugali", price: 430 },
-            { type: "Fufu", price: 450 }
+            { type: "Brown Ugali", price: 370 },
+            { type: "Fufu", price: 400 }
           ]
         },
         {
@@ -120,7 +122,7 @@ const FishOnTheBonnet = () => {
           image: "https://images.pexels.com/photos/29307638/pexels-photo-29307638.jpeg",
           variants: [
             { type: "White Ugali", price: 500 },
-            { type: "Brown Ugali", price: 530 },
+            { type: "Brown Ugali", price: 520 },
             { type: "Fufu", price: 550 }
           ]
         },
@@ -135,8 +137,7 @@ const FishOnTheBonnet = () => {
             { type: "Brown Ugali", price: 370 },
             { type: "Beef rice", price: 400 },
             { type: "Beef mukimo", price: 400 },
-            { type: "Beef matoke", price: 400 },
-            { type: "Beef pilau", price: 400 },
+            { type: "Beef matoke", price: 500 },
             { type: "Fufu", price: 400 }
           ]
         },
@@ -152,7 +153,7 @@ const FishOnTheBonnet = () => {
             { type: "Matumbo rice", price: 300 },
             { type: "Matumbo chapo", price: 260 },
             { type: "Matumbo mukimo", price: 300 },
-            { type: "Beef pilau", price: 400 },
+            { type: "Beef pilau", price: 500 },
             { type: "Fufu", price: 350 }
           ]
         },
@@ -183,7 +184,7 @@ const FishOnTheBonnet = () => {
           image: Matumbo,
           variants: [
             { type: "White Ugali", price: 300 },
-            { type: "Brown Ugali", price: 330 },
+            { type: "Brown Ugali", price: 320 },
             { type: "Fufu", price: 350 }
           ]
         }

@@ -103,7 +103,7 @@ function Home() {
       </div>
       
       <div className="home-content">
-        <h1 className="home-title">Welcome to Fish On The Bonnet</h1>
+        <h1 className="home-title">Welcome To Fish On The Bonnet</h1>
         <p className="home-subtitle">Savor the Finest Global Fish Dishes</p>
         
         {/* Featured dish with refined animation */}
